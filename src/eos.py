@@ -54,6 +54,8 @@ class TabulatedEOS:
 ### Polytropic EOS ###
 ######################
 
+# More information at: Read et al (arXiv:0812.2163v1)
+
 POLYTROPIC_EOS_NAMES = ["2B", "2H", "ALF2", "ENG", "H4", "MPA1", "MS1", "MS1b", "SLy"]
 
 def polytropic_eos_pressure(rho_values: np.array, K: float, Gamma: float) -> np.array:
@@ -127,7 +129,6 @@ class PolytropicEOS:
 
                 # Split each line into parameter name and values
                 param_name, *param_values = line.split()
-                print(param_name, param_values)
 
                 # Convert values to float and update the dictionary
                 for string_value in param_values:

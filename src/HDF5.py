@@ -16,6 +16,8 @@ class MyHDF5:
             hdf5_file (str): Path to the HDF5 file.
         """
         
+        
+        
         self.verbose = verbose
         self.hdf5_file = hdf5_file
         self.process_data()
@@ -68,7 +70,7 @@ class MyHDF5:
         
         # If no radius is specified, take the largest radius
         if radius is None or radius not in self.radii_strain:
-            print("No radius specified or radius not in data, taking largest radius")
+            print("INFO: No radius specified or radius not in data, taking largest radius")
             radius = self.radii_strain.max()
         
         # Get the strain data
